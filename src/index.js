@@ -98,7 +98,7 @@ export default class SignaturePad extends React.Component {
     this._canvas.addEventListener("mousedown", this._handleMouseDown.bind(this));
     this._canvas.addEventListener("mousemove", this._handleMouseMove.bind(this));
     document.addEventListener("mouseup", this._handleMouseUp.bind(this));
-    window.addEventListener("resize", this._resizeCanvas.bind(this));
+    // window.addEventListener("resize", this._resizeCanvas.bind(this));
   };
 
   _handleTouchEvents() {
@@ -319,7 +319,7 @@ export default class SignaturePad extends React.Component {
   render() {
     return (
       <div id="signature-pad" className="m-signature-pad">
-        <div className="m-signature-pad--bodyy">
+        <div className="m-signature-pad--body">
           <canvas ref="cv"></canvas>
         </div>
         { this.props.clearButton &&
